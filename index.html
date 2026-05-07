@@ -10,256 +10,231 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box !important; margin: 0 !important; padding: 0 !important; }
 
 ```
-:root {
-  --ink:      #1a1a1a;
-  --paper:    #f7f4ef;
-  --cream:    #ede9e1;
-  --accent:   #c8410a;
-  --gold:     #d4a843;
-  --rule:     #ccc8c0;
-  --card-bg:  #ffffff;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'Source Sans 3', sans-serif;
-}
-
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth !important; }
 
 body {
-  background-color: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 17px;
-  line-height: 1.7;
+  background-color: #f7f4ef !important;
+  color: #1a1a1a !important;
+  font-family: 'Source Sans 3', Georgia, sans-serif !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
 }
 
 /* ── HEADER ── */
 header {
-  background-color: var(--ink);
-  color: var(--paper);
-  text-align: center;
-  padding: 60px 24px 48px;
-  position: relative;
-  overflow: hidden;
-}
-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 60px,
-    rgba(255,255,255,0.03) 60px,
-    rgba(255,255,255,0.03) 61px
-  );
-  pointer-events: none;
+  background-color: #1a1a1a !important;
+  color: #f7f4ef !important;
+  text-align: center !important;
+  padding: 60px 24px 48px !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 .header-eyebrow {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 16px;
+  font-family: 'Source Sans 3', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #d4a843 !important;
+  margin-bottom: 16px !important;
+  display: block !important;
 }
 header h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 6vw, 3.6rem);
-  font-weight: 900;
-  line-height: 1.15;
-  max-width: 780px;
-  margin: 0 auto 20px;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: clamp(2rem, 6vw, 3.6rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.15 !important;
+  max-width: 780px !important;
+  margin: 0 auto 20px !important;
+  color: #f7f4ef !important;
 }
-header h1 span { color: var(--gold); }
+header h1 span { color: #d4a843 !important; }
 .header-sub {
-  font-size: 1rem;
-  color: rgba(247,244,239,0.7);
-  max-width: 560px;
-  margin: 0 auto;
+  font-size: 1rem !important;
+  color: rgba(247,244,239,0.75) !important;
+  max-width: 560px !important;
+  margin: 0 auto !important;
+  display: block !important;
 }
 .header-rule {
-  width: 48px;
-  height: 3px;
-  background: var(--accent);
-  margin: 28px auto 0;
-  border-radius: 2px;
+  width: 48px !important;
+  height: 3px !important;
+  background: #c8410a !important;
+  margin: 28px auto 0 !important;
+  border-radius: 2px !important;
+  display: block !important;
 }
 
 /* ── INTRO ── */
 .intro {
-  max-width: 720px;
-  margin: 56px auto;
-  padding: 0 24px;
+  max-width: 720px !important;
+  margin: 56px auto !important;
+  padding: 0 24px !important;
 }
 .intro p {
-  margin-bottom: 1.1em;
-  color: #333;
+  margin-bottom: 1.1em !important;
+  color: #333333 !important;
 }
-.intro strong { color: var(--ink); }
+.intro strong { color: #1a1a1a !important; }
 
 /* ── DIVIDER ── */
 .section-divider {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  max-width: 720px;
-  margin: 0 auto 48px;
-  padding: 0 24px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  max-width: 720px !important;
+  margin: 0 auto 48px !important;
+  padding: 0 24px !important;
 }
 .section-divider span {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent);
-  white-space: nowrap;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: #c8410a !important;
+  white-space: nowrap !important;
 }
 .section-divider::before,
 .section-divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--rule);
+  content: '' !important;
+  flex: 1 !important;
+  height: 1px !important;
+  background: #ccc8c0 !important;
+  display: block !important;
 }
 
 /* ── PRODUCT CARDS ── */
 .products {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 0 24px 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  padding: 0 24px 80px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 56px !important;
 }
 
 .product-card {
-  background: var(--card-bg);
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-  transition: box-shadow 0.2s ease;
-}
-.product-card:hover {
-  box-shadow: 0 6px 32px rgba(0,0,0,0.11);
+  background: #ffffff !important;
+  border: 1px solid #ccc8c0 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06) !important;
 }
 
 .card-inner {
-  display: grid;
-  grid-template-columns: 260px 1fr;
+  display: grid !important;
+  grid-template-columns: 260px 1fr !important;
 }
 
 .card-image {
-  background: var(--cream);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 260px;
-  overflow: hidden;
+  background: #ede9e1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 260px !important;
+  overflow: hidden !important;
 }
 .card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 16px;
-  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  padding: 16px !important;
+  display: block !important;
 }
 
 .card-body {
-  padding: 32px 32px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 32px 32px 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
 }
 
 .card-number {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 8px;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: #c8410a !important;
+  margin-bottom: 8px !important;
+  display: block !important;
 }
 
 .card-body h2 {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 14px;
-  color: var(--ink);
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin-bottom: 14px !important;
+  color: #1a1a1a !important;
 }
 
 .card-body p {
-  font-size: 0.97rem;
-  color: #444;
-  line-height: 1.65;
-  margin-bottom: 10px;
+  font-size: 0.97rem !important;
+  color: #444444 !important;
+  line-height: 1.65 !important;
+  margin-bottom: 10px !important;
 }
 
 .pro-tip {
-  background: #fff8f0;
-  border-left: 3px solid var(--accent);
-  padding: 10px 14px;
-  border-radius: 0 3px 3px 0;
-  font-size: 0.88rem;
-  color: #5a3010;
-  margin: 14px 0 20px;
-  font-style: italic;
+  background: #fff8f0 !important;
+  border-left: 3px solid #c8410a !important;
+  padding: 10px 14px !important;
+  border-radius: 0 3px 3px 0 !important;
+  font-size: 0.88rem !important;
+  color: #5a3010 !important;
+  margin: 14px 0 20px !important;
+  font-style: italic !important;
+  display: block !important;
 }
-.pro-tip strong { font-style: normal; color: var(--accent); }
+.pro-tip strong {
+  font-style: normal !important;
+  color: #c8410a !important;
+}
 
 .buy-btn {
-  display: inline-block;
-  background-color: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.92rem;
-  letter-spacing: 0.04em;
-  padding: 13px 28px;
-  border-radius: 3px;
-  transition: background-color 0.18s ease, transform 0.12s ease;
-  align-self: flex-start;
-  margin-top: 4px;
+  display: inline-block !important;
+  background-color: #c8410a !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.92rem !important;
+  letter-spacing: 0.04em !important;
+  padding: 13px 28px !important;
+  border-radius: 3px !important;
+  align-self: flex-start !important;
+  margin-top: 4px !important;
 }
-.buy-btn:hover {
-  background-color: #a83408;
-  transform: translateY(-1px);
-}
-.buy-btn::after { content: ' →'; }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--ink);
-  color: rgba(247,244,239,0.55);
-  text-align: center;
-  padding: 36px 24px;
-  font-size: 0.82rem;
-  line-height: 1.7;
+  background: #1a1a1a !important;
+  color: rgba(247,244,239,0.65) !important;
+  text-align: center !important;
+  padding: 36px 24px !important;
+  font-size: 0.82rem !important;
+  line-height: 1.7 !important;
 }
-footer a { color: var(--gold); text-decoration: none; }
-footer p + p { margin-top: 8px; }
+footer p { margin-bottom: 8px !important; }
+footer strong { color: #f7f4ef !important; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   .card-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .card-image {
-    min-height: 220px;
+    min-height: 220px !important;
   }
   .card-body {
-    padding: 24px 20px 22px;
+    padding: 24px 20px 22px !important;
   }
-  header { padding: 44px 20px 36px; }
+  header { padding: 44px 20px 36px !important; }
 }
 ```
 
@@ -289,7 +264,7 @@ footer p + p { margin-top: 8px; }
 <article class="product-card">
   <div class="card-inner">
     <div class="card-image">
-      <img src="images/IMG_0613.PNG" alt="Westinghouse Thermal Shipping Label Printer" loading="lazy" />
+      <img src="images/IMG_0613.jpeg" alt="Westinghouse Thermal Shipping Label Printer" />
     </div>
     <div class="card-body">
       <div>
@@ -299,7 +274,7 @@ footer p + p { margin-top: 8px; }
         <p>Compatible with USPS, UPS, FedEx, Shopify, and Amazon out of the box. No ink, no toner, no cartridges — ever. Prints 4x6 labels at commercial grade speed. If you're shipping more than a handful of packages a week, this pays for itself fast.</p>
         <div class="pro-tip"><strong>Pro tip:</strong> Don't cheap out on the printer. It's the one piece of equipment you'll use every single shipping day. A $30 savings upfront can cost you hours in frustration.</div>
       </div>
-      <a href="https://amzn.to/4f6Dz9u" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon</a>
+      <a href="https://amzn.to/4f6Dz9u" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon →</a>
     </div>
   </div>
 </article>
@@ -308,7 +283,7 @@ footer p + p { margin-top: 8px; }
 <article class="product-card">
   <div class="card-inner">
     <div class="card-image">
-      <img src="images/IMG_0614.PNG" alt="Rollo Direct Thermal Shipping Labels 4x6" loading="lazy" />
+      <img src="images/IMG_0614.jpeg" alt="Rollo Direct Thermal Shipping Labels 4x6" />
     </div>
     <div class="card-body">
       <div>
@@ -318,7 +293,7 @@ footer p + p { margin-top: 8px; }
         <p>The fanfold format feeds cleanly into most thermal printers including the Westinghouse above. 500 labels per pack keeps you stocked without constant reordering.</p>
         <div class="pro-tip"><strong>Pro tip:</strong> Always test a few labels with your printer before committing to a bulk order of any brand. Adhesive strength and feed alignment vary by printer model.</div>
       </div>
-      <a href="https://amzn.to/4f6Xe9k" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon</a>
+      <a href="https://amzn.to/4f6Xe9k" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon →</a>
     </div>
   </div>
 </article>
@@ -327,7 +302,7 @@ footer p + p { margin-top: 8px; }
 <article class="product-card">
   <div class="card-inner">
     <div class="card-image">
-      <img src="images/IMG_0615.PNG" alt="Shippozz 9x12 Poly Mailers 500 Pack" loading="lazy" />
+      <img src="images/IMG_0615.jpeg" alt="Shippozz 9x12 Poly Mailers 500 Pack" />
     </div>
     <div class="card-body">
       <div>
@@ -337,7 +312,7 @@ footer p + p { margin-top: 8px; }
         <p>These are <strong>durable, waterproof, and self-sealing</strong> with a strong adhesive strip. The 500-pack quantity means you won't be scrambling for mailers mid-week during a busy selling stretch.</p>
         <div class="pro-tip"><strong>Pro tip:</strong> Use poly mailers for anything non-fragile. Save your boxes for items that actually need rigid protection — you'll cut packaging costs significantly.</div>
       </div>
-      <a href="https://amzn.to/4tWLStj" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon</a>
+      <a href="https://amzn.to/4tWLStj" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon →</a>
     </div>
   </div>
 </article>
@@ -346,7 +321,7 @@ footer p + p { margin-top: 8px; }
 <article class="product-card">
   <div class="card-inner">
     <div class="card-image">
-      <img src="images/IMG_0616.PNG" alt="Poly Bags with Suffocation Warning Combo Pack" loading="lazy" />
+      <img src="images/IMG_0616.jpeg" alt="Poly Bags with Suffocation Warning Combo Pack" />
     </div>
     <div class="card-body">
       <div>
@@ -356,7 +331,7 @@ footer p + p { margin-top: 8px; }
         <p>The combo pack includes four sizes (6x9", 8x10", 9x12", 11x14") — 100 of each — so you're covered regardless of product size. Extra strong seal, clear material, and built for retail-ready presentation.</p>
         <div class="pro-tip"><strong>Pro tip:</strong> Even if you're not on FBA yet, buying bags with the suffocation warning now means you won't have to swap your entire supply when you scale up.</div>
       </div>
-      <a href="https://amzn.to/4cVTndP" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon</a>
+      <a href="https://amzn.to/4cVTndP" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon →</a>
     </div>
   </div>
 </article>
@@ -365,7 +340,7 @@ footer p + p { margin-top: 8px; }
 <article class="product-card">
   <div class="card-inner">
     <div class="card-image">
-      <img src="images/IMG_0617.PNG" alt="Amazon Basics Digital Shipping Scale 660lb" loading="lazy" />
+      <img src="images/IMG_0617.jpeg" alt="Amazon Basics Digital Shipping Scale 660lb" />
     </div>
     <div class="card-body">
       <div>
@@ -375,7 +350,7 @@ footer p + p { margin-top: 8px; }
         <p>This one handles up to 660 lbs with <strong>1-ounce readability</strong>, includes a tare function for weighing items inside packaging, and sits flat on any desk or shelf. Simple, accurate, and built to last.</p>
         <div class="pro-tip"><strong>Pro tip:</strong> Always weigh your packaged item — box, mailer, padding, and all — not just the product. Carrier rates are based on the total shipped weight.</div>
       </div>
-      <a href="https://amzn.to/4wfS5Ss" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon</a>
+      <a href="https://amzn.to/4wfS5Ss" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon →</a>
     </div>
   </div>
 </article>
@@ -384,7 +359,7 @@ footer p + p { margin-top: 8px; }
 <article class="product-card">
   <div class="card-inner">
     <div class="card-image">
-      <img src="images/IMG_0618.PNG" alt="Scotch Heavy Duty Shipping Packing Tape 6 Pack" loading="lazy" />
+      <img src="images/IMG_0618.jpeg" alt="Scotch Heavy Duty Shipping Packing Tape 6 Pack" />
     </div>
     <div class="card-body">
       <div>
@@ -394,7 +369,7 @@ footer p + p { margin-top: 8px; }
         <p>Heavy duty grade holds up through the full shipping process, including rough handling at distribution centers.</p>
         <div class="pro-tip"><strong>Pro tip:</strong> Always run tape across all seams on boxes — top, bottom, and the two short side seams. One strip across the center is how packages open in transit.</div>
       </div>
-      <a href="https://amzn.to/4tWySnd" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon</a>
+      <a href="https://amzn.to/4tWySnd" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon →</a>
     </div>
   </div>
 </article>
@@ -403,7 +378,7 @@ footer p + p { margin-top: 8px; }
 <article class="product-card">
   <div class="card-inner">
     <div class="card-image">
-      <img src="images/IMG_0619.PNG" alt="Fuxury Black Bubble Mailers 4x8 200 Pack" loading="lazy" />
+      <img src="images/IMG_0619.jpeg" alt="Fuxury Black Bubble Mailers 4x8 200 Pack" />
     </div>
     <div class="card-body">
       <div>
@@ -413,7 +388,7 @@ footer p + p { margin-top: 8px; }
         <p>Self-sealing adhesive strip, waterproof exterior, and 200 in the pack. The 4x8" size is ideal for smaller items that need more than a flat poly mailer but don't warrant a box.</p>
         <div class="pro-tip"><strong>Pro tip:</strong> Keep both poly mailers and bubble mailers in stock. They serve different purposes — soft goods in poly, fragile small items in bubble. You'll reach for both weekly.</div>
       </div>
-      <a href="https://amzn.to/4esnZ7X" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon</a>
+      <a href="https://amzn.to/4esnZ7X" target="_blank" rel="nofollow noopener" class="buy-btn">View on Amazon →</a>
     </div>
   </div>
 </article>
@@ -422,7 +397,7 @@ footer p + p { margin-top: 8px; }
   </main>
 
   <footer>
-    <p><strong style="color:#f7f4ef;">Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases. This means if you click a link on this page and make a purchase on Amazon, I may receive a small commission at no additional cost to you.</p>
+    <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases. This means if you click a link on this page and make a purchase on Amazon, I may receive a small commission at no additional cost to you.</p>
     <p>All product picks are based on review scores and seller satisfaction — not sponsored placements.</p>
   </footer>
 
